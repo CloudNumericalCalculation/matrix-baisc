@@ -38,8 +38,8 @@ def to_latex_bmatrix(A):
 	latexStr = "\\begin{bmatrix}"
 	for i in range(0, n):
 		for j in range(0, m - 1):
-			latexStr += "%d&" % (A[i, j])
-		latexStr += "%d\\\\\\\\" % (A[i, m - 1])
+			latexStr += "%f&" % (A[i, j])
+		latexStr += "%f\\\\\\\\" % (A[i, m - 1])
 		# 由于markdown的缘故，所以需要输出4个`\`供markdown转义
 	latexStr += "\end{bmatrix}"
 	return latexStr
